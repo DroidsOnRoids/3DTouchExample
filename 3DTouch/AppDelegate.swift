@@ -8,7 +8,25 @@
 
 import UIKit
 
+enum TouchActions: String {
+    case special = "special"
+    case favorite = "favorite"
+    case search = "search"
+   
+    var number: Int {
+        switch  self {
+        case .special:
+            return 2
+        case .favorite:
+            return 1
+        case .search:
+            return 0
+        }
+    }
+}
+
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -16,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 
@@ -41,6 +60,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
 
+        guard let type = TouchActions(rawValue: shortcutItem.type) else {
+            completionHandler(false)
+            return
+        }
+        
+        let selectedIndex = type.number
+        (window?.rootViewController as? UITabBarController)?.selectedIndex = selectedIndex
+      
+        completionHandler(true)
+    }
+    
+    
 }
 

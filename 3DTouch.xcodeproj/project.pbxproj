@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E5609E4E1D9139E700C1A61A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5609E4D1D9139E700C1A61A /* AppDelegate.swift */; };
-		E5609E501D9139E700C1A61A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5609E4F1D9139E700C1A61A /* ViewController.swift */; };
+		E5609E501D9139E700C1A61A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5609E4F1D9139E700C1A61A /* SearchViewController.swift */; };
 		E5609E531D9139E700C1A61A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5609E511D9139E700C1A61A /* Main.storyboard */; };
 		E5609E551D9139E700C1A61A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5609E541D9139E700C1A61A /* Assets.xcassets */; };
 		E5609E581D9139E700C1A61A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5609E561D9139E700C1A61A /* LaunchScreen.storyboard */; };
+		E5F5734F1D92BA0400FFC399 /* SpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F5734E1D92BA0400FFC399 /* SpecialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E5609E4A1D9139E700C1A61A /* 3DTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5609E4D1D9139E700C1A61A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5609E4F1D9139E700C1A61A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5609E4F1D9139E700C1A61A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E5609E521D9139E700C1A61A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5609E541D9139E700C1A61A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5609E571D9139E700C1A61A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5609E591D9139E700C1A61A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5F5734E1D92BA0400FFC399 /* SpecialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				E5609E4D1D9139E700C1A61A /* AppDelegate.swift */,
-				E5609E4F1D9139E700C1A61A /* ViewController.swift */,
+				E5609E4F1D9139E700C1A61A /* SearchViewController.swift */,
+				E5F5734E1D92BA0400FFC399 /* SpecialViewController.swift */,
 				E5609E511D9139E700C1A61A /* Main.storyboard */,
 				E5609E541D9139E700C1A61A /* Assets.xcassets */,
 				E5609E561D9139E700C1A61A /* LaunchScreen.storyboard */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					E5609E491D9139E700C1A61A = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 27FAFL2WP5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5609E501D9139E700C1A61A /* ViewController.swift in Sources */,
+				E5609E501D9139E700C1A61A /* SearchViewController.swift in Sources */,
 				E5609E4E1D9139E700C1A61A /* AppDelegate.swift in Sources */,
+				E5F5734F1D92BA0400FFC399 /* SpecialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +265,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 27FAFL2WP5;
 				INFOPLIST_FILE = 3DTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.droidsonroids.-DTouch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -272,11 +280,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 27FAFL2WP5;
 				INFOPLIST_FILE = 3DTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.droidsonroids.-DTouch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -299,6 +310,7 @@
 				E5609E5E1D9139E700C1A61A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
