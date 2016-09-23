@@ -39,21 +39,21 @@ extension SearchViewController {
         
         if let touch = touches.first {
          
-            guard is3DTouchAvailable, circleView.frame.contains(touch.location(in: view)) else { return }
+            guard is3DTouchAvailable, square.frame.contains(touch.location(in: view)) else { return }
             
             let maximumForce = touch.maximumPossibleForce
             let force = touch.force
             let normalizedForce = (force / maximumForce) + 1.0;
                 
             let animation = CGAffineTransform(scaleX: normalizedForce, y: normalizedForce)
-            circleView.transform = animation
+            square.transform = animation
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
-        circleView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        square.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
     }
 }
 
