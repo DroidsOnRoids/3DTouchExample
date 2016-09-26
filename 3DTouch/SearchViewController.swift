@@ -53,7 +53,7 @@ extension SearchViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
-        square.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        square.transform = CGAffineTransform.identity
     }
 }
 
